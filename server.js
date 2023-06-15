@@ -28,7 +28,7 @@ app.get('/home', function(req, res){
 
 app.get('/videogames', function(){
     const videogames = videogamedb.getAll();
-    res.render();
+    res.render('videogames/index', { videogames });
 });
 
 //Port assignment//
