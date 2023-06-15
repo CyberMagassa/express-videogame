@@ -2,6 +2,9 @@
 const express = require('express');
 const path = require('path');
 
+//require Videogame 'Database'//
+const videogamedb = require('./data/videogame-db');
+
 // Create our express app//
 const app = express();
 
@@ -21,6 +24,11 @@ app.get('/', function(req, res){
 });
 app.get('/home', function(req, res){
     res.render('home');
+});
+
+app.get('/videogames', function(){
+    const videogames = videogamedb.getAll();
+    res.render();
 });
 
 //Port assignment//
