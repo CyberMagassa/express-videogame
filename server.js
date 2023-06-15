@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 //next practice will use DRY//
 
 app.get('/', function(req, res){
-    res.send('<h1>Express Practice Nexus VideoGame Reviews</h1>');
+    res.send('<h1>Express Practice Nexus Top 5 Videogames </h1>');
 });
 app.get('/home', function(req, res){
     res.render('home');
