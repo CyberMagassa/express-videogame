@@ -26,7 +26,7 @@ app.get('/home', function(req, res){
     res.render('home');
 });
 
-app.get('/videogames', function(){
+app.get('/videogames', function(req, res){
     const videogames = videogamedb.getAll();
     res.render('videogames/index', { videogames });
 });
